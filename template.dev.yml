@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: A simple Hello World MySQL Serverless project
+Resources:
+  APILambda:
+      Type: AWS::Serverless::Function
+      Properties:
+        Handler: handler.handler
+        Timeout: 30
+        CodeUri: ./dist.zip
+        Runtime: nodejs6.10
+        Events:
+          ApiRoot:
+            Type: Api
+            Properties:
+              Path: /
+              Method: ANY
+          ApiGreedy:
+            Type: Api
+            Properties:
+              Path: /{proxy+}
+              Method: ANY

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+rm -f dist.zip
+npm install --production
+zip -r dist.zip ./
+docker-compose up --build --abort-on-container-exit
