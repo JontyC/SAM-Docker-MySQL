@@ -13,7 +13,7 @@ $ bin/development
 
 ```
 
-This will create a deployment package of the current directory for use with the SAM Local Lambda function.
+This will create a deployment package of the current directory for use with the SAM Local Lambda function and spin up Docker using docker-compose.
 
 Browsing to `http://localhost:3000/` will show a status endpoint with the configuration listed. `/database` shows the connectivity to the database.
 
