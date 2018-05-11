@@ -1,6 +1,6 @@
 # SAM-Docker-MySQL
 
-for [Amazon AWS SAM Local](https://github.com/awslabs/aws-sam-local).
+An example [Express](https://github.com/expressjs/express) + MySQL SAM project for [Amazon AWS SAM Local](https://github.com/awslabs/aws-sam-local). Makes use of [docker-aws-sam-local](https://github.com/cnadiminti/docker-aws-sam-local/).
 
 ## What is AWS SAM Local?
 
