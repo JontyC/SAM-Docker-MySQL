@@ -10,6 +10,7 @@ Resources:
         Timeout: 30
         CodeUri: ./dist.zip
         Runtime: nodejs6.10
+        MemorySize: 1024
         Events:
           ApiRoot:
             Type: Api

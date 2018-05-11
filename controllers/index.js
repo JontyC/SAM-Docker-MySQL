@@ -10,7 +10,6 @@ const connection = mysql.createConnection({
 });
 
 function status(req, res) {
-
     return res.json({ status: 'running', config });
 }
 
@@ -19,6 +18,7 @@ function query(req, res) {
     connection.connect();
     connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
         if (error) {
+            console.log('Error:' + JSON.stringify(error));
             return res.sendStatus(500);
         };
 
@@ -26,7 +26,6 @@ function query(req, res) {
     });
 
     connection.end();
-
 }
 
 module.exports = { status, query };
